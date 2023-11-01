@@ -2,10 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Pizza</title>
-    <link rel="stylesheet/less" href="src/styles/styles.less">
-    <!--    <link rel="stylesheet/less" href="css/adaptive.less">-->
-    <script src="https://cdn.jsdelivr.net/npm/less"></script>
+    <title>Адаптивная верстка</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/adaptive.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
@@ -42,7 +41,7 @@
 </svg>
             </div>
             <ul>
-                <li class="menu-item"><a href="#">Пиццы</a></li>
+                <li class="menu-item"><a href="#products">Пиццы</a></li>
                 <li class="menu-item"><a href="#">Напитки</a></li>
                 <li class="menu-item"><a href="#">Доставка и оплата</a></li>
                 <li class="menu-item"><a href="#">Контакты</a></li>
@@ -101,9 +100,9 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="main-action">
-                <button class="btn">Выбрать пиццу</button>
+                <div class="main-action">
+                    <button class="btn" id="choose-pizza">Выбрать пиццу</button>
+                </div>
             </div>
         </div>
         <div class="main-image">
@@ -111,7 +110,7 @@
         </div>
     </div>
 </section>
-<section class="products">
+<section class="products" id="products">
     <div class="container">
         <h2 class="products-title" id="products-title">Выберите свою любимую пиццу</h2>
         <div class="products-items">
@@ -124,7 +123,7 @@
                     ананасы
                 </div>
                 <div class="product-action">
-                    <button class="btn">В корзину</button>
+                    <button class="btn btn-add-to-cart">В корзину</button>
                 </div>
             </div>
             <div class="product">
@@ -134,7 +133,7 @@
                 <div class="product-title">Морская Премиум</div>
                 <div class="product-text">Перец, сыр, креветки, кальмары, мидии, лосось</div>
                 <div class="product-action">
-                    <button class="btn">В корзину</button>
+                    <button class="btn btn-add-to-cart" id="no-touch">В корзину</button>
                 </div>
             </div>
             <div class="product">
@@ -144,7 +143,7 @@
                 <div class="product-title">Бекон и сосиски</div>
                 <div class="product-text">Бекон, сыр, сосиски, ананас, томатная паста</div>
                 <div class="product-action">
-                    <button class="btn">В корзину</button>
+                    <button class="btn btn-add-to-cart">В корзину</button>
                 </div>
             </div>
             <div class="product">
@@ -154,7 +153,7 @@
                 <div class="product-title">Куриная Делюкс</div>
                 <div class="product-text">Курица, ананас, сыр Пепперони, соус для пиццы, томатная паста</div>
                 <div class="product-action">
-                    <button class="btn">В корзину</button>
+                    <button class="btn btn-add-to-cart">В корзину</button>
                 </div>
             </div>
             <div class="product">
@@ -164,7 +163,7 @@
                 <div class="product-title">Барбекю Премиум</div>
                 <div class="product-text">Свинина BBQ, соус Барбкею, сыр, курица, соус для пиццы, соус чили</div>
                 <div class="product-action">
-                    <button class="btn">В корзину</button>
+                    <button class="btn btn-add-to-cart">В корзину</button>
                 </div>
             </div>
             <div class="product">
@@ -174,7 +173,7 @@
                 <div class="product-title">Пепперони Дабл</div>
                 <div class="product-text">Пепперони, сыр, колбаса 2 видов: обжаренная и вареная</div>
                 <div class="product-action">
-                    <button class="btn">В корзину</button>
+                    <button class="btn btn-add-to-cart">В корзину</button>
                 </div>
             </div>
             <div class="product">
@@ -186,7 +185,7 @@
                     пиццы
                 </div>
                 <div class="product-action">
-                    <button class="btn">В корзину</button>
+                    <button class="btn btn-add-to-cart">В корзину</button>
                 </div>
             </div>
             <div class="product">
@@ -196,7 +195,7 @@
                 <div class="product-title">Сырная</div>
                 <div class="product-text">Сыр Джюгас, Сыр с плесенью, Сыр Моцарелла, Сыр секретный</div>
                 <div class="product-action">
-                    <button class="btn">В корзину</button>
+                    <button class="btn btn-add-to-cart">В корзину</button>
                 </div>
             </div>
         </div>
@@ -216,10 +215,10 @@
             <div class="order-text-"></div>
         </div>
         <div class="order-form">
-            <input class="order-input" type="text" placeholder="Ваше имя">
-            <input class="order-input" type="text" name="address" placeholder="Адрес доставки">
-            <input class="order-input" type="text" placeholder="Телефон">
-            <button class="btn">Оформить заказ</button>
+            <input class="order-input" type="text" id="product-input" placeholder="Пицца">
+            <input class="order-input" type="text" id="address-input" name="address" placeholder="Адрес доставки">
+            <input class="order-input" type="text" id="phone-input" placeholder="Телефон">
+            <button class="btn" id="create-order">Оформить заказ</button>
         </div>
         <div class="order-image">
             <img src="img/pizza_piece.png" alt="Кусочек пиццы">
@@ -232,12 +231,22 @@
             <img src="img/logo.png" alt="Логотип">
         </div>
         <div class="rights">
-            Все права защищены, 2020
+            Все права защищены, <span>2020</span>
         </div>
     </div>
 </footer>
 
-<script src="scripts/script.js"></script>
+<script src="scripts/script.js">
+    /*document.getElementById('burger').onclick = function () {
+        document.getElementById('menu').classList.add('open')
+    }
+
+    document.querySelectorAll('#menu *').forEach((item) => {
+        item.onclick = () => {
+            document.getElementById('menu').classList.remove('open');
+        }
+    })*/
+</script>
 
 </body>
 </html>
